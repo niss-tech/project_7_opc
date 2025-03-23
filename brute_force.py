@@ -51,10 +51,10 @@ best_combination, best_profit = get_best_combination(all_combinations, max_budge
 # Affichage du résultat
 if best_combination:
     total_cost = sum(action['cost'] for action in best_combination)  # Calcul du coût total
-    print("\n🥇 Meilleure combinaison d'actions :")
+    print(" Meilleure combinaison d'actions :")
     for action in best_combination:
         print(f"{action['name']} - Coût : {action['cost']}€ - Bénéfice : {action['profit'] * action['cost']}€")
-    print(f"\n💰 Coût total : {total_cost}€")  # Affichage du coût total
-    print(f"💰 Profit total : {best_profit}€")
+    print(f"Coût total : {total_cost}€")  # Affichage du coût total
+    print(f"Profit total : {best_profit}€")
 else:
     print("\n❌ Aucune combinaison rentable dans la limite de 500€.")
